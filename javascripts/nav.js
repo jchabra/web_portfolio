@@ -1,6 +1,6 @@
 $(function(){
 
-  $('#navbuttons a').click(scroll);
+  $('#header a').click(scroll);
 
   $(window).scroll(showReturn);
   $(window).resize(showReturn);
@@ -17,7 +17,7 @@ function scroll()
 
 function returnTop()
 {
-  $.scrollTo( "#container", 900, { easing: 'easeOutQuad', axis: 'y' });
+  $.scrollTo( "#wrapper", 900, { easing: 'easeOutQuad', axis: 'y' });
 }
 
 function showReturn()
