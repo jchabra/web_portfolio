@@ -154,6 +154,40 @@ footer p.text {
   float: right;
   padding: 10px 20px;
 }
+footer .footer_links {
+  display: inline-block;
+  margin: 10px 20px;
+}
+footer .footer_links a {
+  display: inline-block;
+  margin-right: 5px;
+}
+footer .footer_links a.linkedin {
+  background: url("../images/linkedin_icon.png") no-repeat;
+  background-position: 0px 0px;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+footer .footer_links a.linkedin:hover {
+  background-position: 0px -39px;
+}
+footer .footer_links a.github {
+  background: url("../images/github_icon.png") no-repeat;
+  background-position: 0px 0px;
+  background-size: 40px;
+  width: 40px;
+  height: 39px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+footer .footer_links a.github:hover {
+  background-position: 0px -39px;
+}
 
 .grid {
   position: relative;
@@ -250,7 +284,7 @@ footer p.text {
 }
 .grid figure.image-effect p.icon-links a.link {
   background: url("../images/link_icon.png") no-repeat;
-  background-position: 0px 2px;
+  background-position: 0px 1px;
   background-size: 35px;
   width: 40px;
   height: 35px;
@@ -265,10 +299,10 @@ footer p.text {
 }
 .grid figure.image-effect p.icon-links a.github {
   background: url("../images/github_icon.png") no-repeat;
-  background-position: 0px 1px;
+  background-position: 0px 0px;
   background-size: 40px;
   width: 40px;
-  height: 40px;
+  height: 39px;
   margin: 10px auto;
   display: block;
   text-indent: 100%;
