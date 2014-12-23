@@ -58,7 +58,10 @@ section {
 }
 
 #header {
+  background: url(../images/flower2.png) no-repeat;
   background-color: #4d5464;
+  background-size: 280px;
+  background-position: 15% -45px;
   height: 190px;
 }
 #header .container {
@@ -126,7 +129,8 @@ section.portfolio {
 }
 
 section.about {
-  background-color: #f6f6f6;
+  background: url(../images/flower.png) no-repeat #f6f6f6;
+  background-position: 95% 65px;
   color: #4d5464;
 }
 section.about h2 {
@@ -234,12 +238,45 @@ footer p.text {
 .grid figure.image-effect h2 a:hover {
   color: #4d5464;
 }
+.grid figure.image-effect p.icon-links {
+  margin-right: 10px;
+}
 .grid figure.image-effect p.icon-links a {
   float: right;
   color: #3c4a50;
   font-size: 1.4em;
   margin-top: 15px;
-  margin-right: 10px;
+  margin-right: 20px;
+}
+.grid figure.image-effect p.icon-links a.link {
+  background: url("../images/link_icon.png") no-repeat;
+  background-position: 0px 2px;
+  background-size: 35px;
+  width: 40px;
+  height: 35px;
+  margin: 10px auto;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.grid figure.image-effect p.icon-links a.link:hover {
+  background-position: 0px -33px;
+}
+.grid figure.image-effect p.icon-links a.github {
+  background: url("../images/github_icon.png") no-repeat;
+  background-position: 0px 1px;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.grid figure.image-effect p.icon-links a.github:hover {
+  background-position: 0px -39px;
 }
 .grid figure.image-effect p.description {
   position: absolute;
