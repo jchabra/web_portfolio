@@ -149,7 +149,7 @@ p#heading {
 }
 
 section.portfolio {
-  min-height: 700px;
+  min-height: 650px;
 }
 
 section.about {
@@ -217,7 +217,8 @@ footer {
 .grid {
   position: relative;
   margin: 0 auto;
-  padding: 1em 0 4em;
+  padding-top: 1em;
+  // padding: 1em 0 4em;
   max-width: 1000px;
   list-style: none;
   text-align: center;
@@ -225,11 +226,10 @@ footer {
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 10px 1%;
-    min-width: 320px;
-    max-width: 480px;
-    max-height: 360px;
-    width: 48%;
+    // margin: 10px 1%;
+    // min-width: 320px;
+    // max-width: 480px;
+    // width: 48%;
     background: #000;
     text-align: center;
     cursor: pointer;
@@ -258,6 +258,8 @@ footer {
       font-size: 68.5%;
     }
     &.image-effect {
+      padding: 0;
+      margin-bottom: 20px;
       &:hover {
         img.port_img {
           opacity: 0.4;
@@ -341,7 +343,7 @@ footer {
           padding: 15px;
           color: #fff;
           text-transform: none;
-          font-size: 80%;
+          font-size: 75%;
           font-weight: 300;
           opacity: 0;
           -webkit-transition: opacity 0.35s;
@@ -590,7 +592,7 @@ textarea {
 
 @media screen and (max-width: 920px) {
   .grid figure.image-effect p.description {
-    font-size: 75%;
+    font-size: 70%;
   }
   section.portfolio {
     min-height: 655px;
@@ -599,23 +601,34 @@ textarea {
 
 @media screen and (max-width: 880px) {
   .grid figure.image-effect p.description {
-    font-size: 70%;
+    font-size: 58%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .grid figure.image-effect p.description {
+    font-size: 95%;
+    bottom: 10em;
   }
 }
 
 @media screen and (max-width: 820px) {
-  .grid figure.image-effect p.description {
-    font-size: 65%;
-  }
   section.portfolio {
     min-height: 600px;
   }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 806px) {
   .grid figure.image-effect p.description {
-    font-size: 62%;
-    bottom: 6em; 
+    font-size: 85%;
+    bottom: 8em;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .grid figure.image-effect p.description {
+    font-size: 75%;
+    bottom: 7em; 
   }
 }
 
@@ -630,7 +643,7 @@ textarea {
     width: 200px;
   }
   .grid figure.image-effect p.description {
-    font-size: 58%;
+    // font-size: 58%;
   }
   .grid figure.image-effect h2 {
     font-size: 18px;
@@ -661,9 +674,6 @@ textarea {
 }
 
 @media screen and (max-width: 700px) {
-  .grid figure.image-effect p.description {
-    font-size: 53%;
-  }
   section.portfolio {
     min-height: 500px;
   }
@@ -677,7 +687,7 @@ textarea {
     }
   } //ul.navlinks
   .grid figure.image-effect p.description {
-    font-size: 50%;
+    font-size: 70%;
     bottom: 7.5em;
   }
   section.portfolio {
@@ -687,6 +697,20 @@ textarea {
         margin: 10px 18%;
       }
     }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .grid figure.image-effect p.description {
+    font-size: 60%;
+    bottom: 7.5em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .grid figure.image-effect p.description {
+    font-size: 55%;
+    bottom: 7.5em;
   }
 }
 
@@ -701,6 +725,10 @@ textarea {
         }
       }
     }
+  }
+  .grid figure.image-effect p.description {
+    font-size: 50%;
+    bottom: 7em;
   }
   section.portfolio {
     div.grid {
