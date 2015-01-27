@@ -2,9 +2,16 @@
 // 1) Fonts
 // 2) Mixins
 // 3) Variables
-// 4) Setup
-// 5) Base Styles
-// 6) Header & Navigation
+// 4) Media All Queries
+//    a) Setup
+//    b) Base Styles
+//    c) Navigation
+//    d) Footer
+//    e) Portfoliio Affects
+//    f)  Other Layout Styles
+//    g) Contact Form
+// 5) Large Device Media Queries
+// 6) Small Device Media Queries
 
 
 //  **** Fonts **** //
@@ -17,8 +24,6 @@
   overflow: hidden;
 }
 
-// **** Setup **** //
-
 // **** Variables **** //
 $green: #88bfb6;
 $white: #fff;
@@ -27,7 +32,10 @@ $pink: #b66f6d;
 $beige: #f6f6f6;
 $darkblue: #3a404c;
 
+// **** --------------- MEDIA "ALL" QUERIES ----------------- *****//
 
+@media all {
+// **** Setup **** //
 
 // Box Model Hack 
 * {
@@ -87,19 +95,14 @@ section {
   padding: 20px 0 25px 0;
 }
 
-// **** --------------- NAVIGATION ----------------- *****//
+// ****  NAVIGATION  ****//
 #header {
-  background:url(../images/flower2.png) no-repeat;
   background-color: $blue;
-  background-size: 280px;
-  background-position: 15% -45px;
-  height: 190px;
   .container {
     margin: auto;
-    width: 960px;
     nav {
-      width: 600px;
-      margin: auto;
+      margin: 0 auto;
+      text-align: center;
       h1 {
         font-size: 140px;
         line-height: 1em;
@@ -116,7 +119,6 @@ section {
         margin: 0px;
         li {
           float: left;
-          margin-right: 85px;
           font-size: 28px;
           font-weight: 100;
           &.last {
@@ -132,15 +134,9 @@ section {
       }
     }  
   }
-}
+} //#header
 
-// **** --------------- SECTIONS ----------------- *****//
-
-.container {
-  width: 960px;
-  margin: auto;
-}
-
+// **** SECTIONS **** //
 div.white_border {
   height: 5px;
   width: 100%;
@@ -178,6 +174,7 @@ section.contact {
   }
 }
 
+// **** FOOTER **** //
 footer {
   background-color: $darkblue;
   color: $white;
@@ -218,7 +215,7 @@ footer {
   }
 }
 
-// **** --------------- PORTFOLIO AFFECTS ----------------- *****//
+// ****  PORTFOLIO AFFECTS **** //
 
 .grid {
   position: relative;
@@ -423,46 +420,7 @@ figure.image-effect:hover p.icon-links a:first-child {
   transition-delay: 0.2s;
 }
 
-// **** --------------- MEDIA QUERIES ----------------- *****//
-
-// @media all {
-//   #header {
-//     nav {
-//       ul.nav_links {
-//         li {
-//           float: left;
-//         }
-//       }
-//     }  
-//   }
-// }
-
-// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-//   body: 100%;
-//   #header {
-//     width: 100%;
-//     .container {
-//       min-width: 320px;
-//       max-width:480px;
-//       margin: auto;
-//       nav {
-//         width: 100%;
-//         h1 {
-//           font-size: 225px;
-//         }
-//         ul {
-//           li {
-//             font-size: 20px;
-//             margin: 10px;
-//             float: left;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-/* --------------- OTHER LAYOUT STYLES -----------------*/
+//**** OTHER LAYOUT STYLES ****//
 #returntotop {
   z-index: 9997;
   position: fixed;
@@ -598,9 +556,9 @@ input, textarea {
   border: 1px solid $blue;
 }
 
-  input:focus, textarea:focus {
-    border:1px solid #97d6eb;
-  }
+input:focus, textarea:focus {
+  border:1px solid #97d6eb;
+}
 
 textarea {
   width: 940px;
@@ -624,6 +582,73 @@ textarea {
     background-color: $pink;
     border: 2px solid $pink;
     color: $white;
+  }
+}
+
+} // media "all" queries
+
+// **** --------------- LARGE DEVICE MEDIA QUERIES ----------------- *****//
+
+@media screen and (min-width: 768px) {
+// ****  NAVIGATION  *****//
+#header {
+  background:url(../images/flower2.png) no-repeat;
+  background-size: 280px;
+  background-position: 15% -45px;
+  height: 190px;
+  .container {
+    nav {
+      h1 {
+        font-size: 140px;
+        a {
+          text-decoration: none;
+          color: $green;
+          font-weight: 100;
+        }
+      }
+      ul.nav_links {
+        li {
+          font-size: 28px;
+          font-weight: 100;
+          a {
+            color: $green;
+            &:hover {
+              color: $pink;
+            }
+          }
+        }
+      }
+    }  
+  }
+} //#header
+
+} // media query min-width 768px
+
+// **** --------------- SMALL DEVICE MEDIA QUERIES ----------------- *****//
+
+@media screen and (max-width: 767px) {
+  nav {
+    h1 {
+      font-size: 865%;
+    }
+    ul {
+      li {
+        font-size: 200%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav {
+    h1 {
+      font-size: 565%;
+    }
+    ul {
+      li {
+        font-size: 150%;
+      }
+    }
   }
 }
 

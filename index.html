@@ -5,9 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <title>Jasmine Chabra's Web Portfolio</title>
   <link rel="stylesheet" href="css/normalize.css">
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
+  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css" />
+<!--<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]>
+  <link rel="stylesheet" href="./assets/stylesheets/ie.css" />
+<![endif]-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/jfavicon.png" />
   <script src="javascripts/jquery-1.9.1.min.js"></script>
@@ -18,20 +25,74 @@
 </head>
 
 <body>
+<div class="grid-container" style="background: green;">
+  <div class="grid-50 mobile-grid-100" style="background: red;">
+    I am 50% wide on desktop.
+    I am 100% wide on mobile.
+  </div>
+  <div class="grid-25 mobile-grid-50" style="background: blue;">
+    I am 25% wide on desktop.
+    I am 50% wide on mobile.
+  </div>
+  <div class="grid-25 mobile-grid-50" style="background: yellow;">
+    <span class="hide-on-desktop" style="background: purple;">
+      I am hidden on desktop.
+    </span>
+    <span class="hide-on-mobile" style="background: orange;">
+      I am hidden on mobile.
+    </span>
+  </div>
+</div><!-- test example -->
+
+Test 2
+<div class="grid-container" style="border: 1px solid red;">
+  <div class="grid-50" style="border: 1px solid green;">
+    Tall content here that
+    would be alongside the
+    50%, 25|25 25|25 rows.
+  </div>
+
+  <!--
+    Nested grid units...
+  -->
+
+  <div class="grid-50 grid-parent" style="border: 1px solid blue;">
+    <div class="grid-50" style="border: 1px solid orange;">
+      Row 1:
+        I am 25% (50% of 50%)
+    </div>
+    <div class="grid-50" style="border: 1px solid yellow;">
+      Row 1:
+        I am 25% (50% of 50%)
+    </div>
+    <div class="grid-50" style="border: 1px solid pink;">
+      Row 2:
+        I am 25% (50% of 50%)
+    </div>
+    <div class="grid-50" style="border: 1px solid purple;">
+      Row 2:
+        I am 25% (50% of 50%)
+    </div>
+  </div>
+</div><!-- test 2 -->
+
+
   <div id="wrapper">
   <!-- ******** Header and Nav ******** -->
   <div id="header">
-    <div class="container">
-      <nav>
-        <h1 class="logo"><a href="#">JASMINE</a></h1>
-        <ul class="nav_links">
-          <li><a href="#portfolio">{PORTFOLIO}</a></li>
-          <li><a href="#about">{ABOUT}</a></li>
-          <li class="last"><a href="#contact">{CONTACT}</a></li>
+    <div class="grid-container">
+     <div class="container grid-100 mobile-grid-100">
+      <nav class="grid-100 mobile-grid-100">
+        <h1 class="logo grid-100 mobile-grid-100"><a href="#">JASMINE</a></h1>
+        <ul class="nav_links grid-100">
+          <li class="grid-20 mobile-grid-33 prefix-20"><a href="#portfolio">{PORTFOLIO}</a></li>
+          <li class="grid-20 mobile-grid-33"><a href="#about">{ABOUT}</a></li>
+          <li class="grid-20 mobile-grid-33 suffix-20"><a href="#contact">{CONTACT}</a></li>
         </ul>
       </nav>
-    </div><!-- /.container -->
-  </div><!-- /#header -->
+    </div><!-- /.container  .grid-100 .mobile-grid-100-->
+  </div><!-- //.grid-container -->
+</div><!-- /#header -->
   <!-- ******** End of Header and Nav ******** -->
 
   <!-- ******** PORTFOLIO ******** -->
@@ -50,13 +111,13 @@
               <h2>
                 <a href="https://my.sailthru.com" target="_blank">SAILTHRU</a>
               </h2>
-              <p class="web_tech">web technologies lorem epsum blah and blah
+              <p class="web_tech">HTML5, CSS3 (SASS), JavaScript, &amp; PHP
               </p>
             </div><!-- /.title -->
             <p class="icon-links">
               <a href="http://donate-a-wish.herokuapp.com/" target="_blank" class="link">link</a>
             </p>
-            <p class="description">Sailthru UI</p>
+            <p class="description">Redesigned company interface for improved user experience. Implemented a new look and feel across site, using HTML5, CSS3 (SASS), JavaScript, and PHP. <br><br></p>
           </figcaption>     
         </figure>
         <!--/sail_thru-->
@@ -73,7 +134,7 @@
               <p class="web_tech">html5, css3, javascript &amp; ruby on rails
                 <br>foundation framework
               </p>
-            </div><!-- /.title -->
+            </div><!-- //.title -->
             <p class="icon-links">
               <a href="https://github.com/jchabra/wishez" target="_blank" class="github">github</a>
               <a href="http://donate-a-wish.herokuapp.com/" target="_blank" class="link">link</a>
@@ -84,7 +145,7 @@
             </p>
           </figcaption>     
         </figure>
-        <!--/donate a wish-->
+        <!--//donate a wish-->
         <!--barterville-->
         <figure class="image-effect">
           <a href="http://thebarterville.herokuapp.com/" target="_blank">
@@ -98,7 +159,7 @@
               <p class="web_tech">html5, css3, javascript &amp; ruby on rails
                 <br>twitter bootstrap framework
               </p>
-            </div><!-- /.title -->
+            </div><!-- //.title -->
             <p class="icon-links">
               <a href="https://github.com/jchabra/barterville_jc" target="_blank" class="github">github</a>
               <a href="http://thebarterville.herokuapp.com/" target="_blank" class="link">link</a>
@@ -109,7 +170,7 @@
             </p>
           </figcaption>     
         </figure>
-        <!--/barterville-->
+        <!--//barterville-->
         <!--datestr-->
         <figure class="image-effect">
           <a href="http://datestr.herokuapp.com/" target="_blank">
@@ -134,33 +195,33 @@
             </p>
           </figcaption>     
         </figure>
-        <!--/datestr-->
-      </div><!-- /.grid-->
-    </section><!-- /section -->
+        <!--//datestr-->
+      </div><!-- //.grid-->
+    </section><!-- //.portfolio -->
   </div><!-- end of #portfolio -->
   <!-- ******** END OF PORTFOLIO ******** -->
 
   <!-- ******** ABOUT ******** -->
   <div id="about">
     <section class="about">
-      <div class="container">
+      <div class="container grid-container">
         <h2>{about me}</h2>
         <h4 class="top">EDUCATION &amp; EXPERIENCE:</h4>
         <p class="about">I have a BA in Economics from NYU (2007).</p>
-        <p class="underline about">I recently completed General Assembly's <a href="http://wdi2.github.io/students/" target="_blank"><b>Web Development Immersive (WDI)</b></a> Program, which is a full-stack intensive course on HTML/CSS, Javascript, AJAX, jQuery, Ruby, Ruby on Rails. Prior to WDI, I worked in marketing in the tech world. I have 5+ years of experience in digital, design, event, and social media marketing.</p>
+        <p class="about">I am a web developer, with a focus on front-end and user interface design. I recently worked as a front-end developer at Sailthru, a big data/email service provider start-up based in New York.</p>
+        <p class="underline about">I graduated from General Assembly's <a href="http://wdi2.github.io/students/" target="_blank"><b>Web Development Immersive (WDI)</b></a> Program, which is a full-stack intensive course on HTML/CSS, Javascript, AJAX, jQuery, Ruby, Ruby on Rails. Prior to WDI, I worked in marketing in the tech world. I have 5+ years of experience in digital, design, event, and social media marketing.</p>
         <h4 class="top2">TECHNICAL SKILLS:</h4>
         <p class="about bullet"><span>&bull;</span><strong>Web Dev:</strong> HTML5, CSS3, HAML, SASS, JavaScript, AJAX, Jquery, JSON, Ruby on Rails</p>
         <p class="about bullet"><span>&bull;</span><strong>Design:</strong> Adobe Photoshop, Illustrator, InDesign, Dreamweaver (MAC/PC)</p>
         <p class="about bullet"><span>&bull;</span><strong>Database:</strong> PostgreSQL, Oracle SQL</p>
-        <p class="about bullet"><span>&bull;</span><strong>Management:</strong> Pivotal Tracker, Github, Cyberduck, MS Office </p>
+        <p class="about bullet"><span>&bull;</span><strong>Management:</strong> FogBugz, Trello, Pivotal Tracker, Github, Cyberduck, MS Office </p>
         <p class="about bullet"><span>&bull;</span><strong>Cloud Application Program:</strong> Heroku, Amazon S3</p>
         <p class="about bullet"><span>&bull;</span><strong>Customer Relationship Management (Sales):</strong> Microsoft Dynamics CRM, Salesforce</p>
         <p class="about bullet"><span>&bull;</span>Experienced in Agile methodology</p>
         <p class="about bullet"><span>&bull;</span>In-depth understanding of Web marketing, Web 2.0, &amp; search engine optimization</p>
-      </div><!--/container -->
-      <!-- <div><img src="images/coffee.png" style="height:420px;"></div> -->
-    </section>
-  </div>
+      </div><!--//.container .grid-container-->
+    </section> <!-- //.about -->
+  </div><!-- //#about -->
   <!-- ******** END OF ABOUT ******** -->
 
   <!-- ******** CONTACT ******** -->
@@ -205,6 +266,6 @@
     </div>
     <p class="text">Hand coded and designed with <span class="pink">&hearts;</span> by Jasmine.</p>
   </footer>
-</div>
+</div><!-- //#wrapper -->
 </body>
 </html>
