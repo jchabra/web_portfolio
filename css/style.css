@@ -553,7 +553,7 @@
 }
 @media screen and (max-width: 740px) {
   .grid figure.image-effect figcaption .title {
-    width: 200px;
+    width: 190px;
   }
 
   .grid figure.image-effect h2 {
@@ -636,6 +636,39 @@
 @media screen and (max-width: 390px) {
   #header .container nav ul.nav_links li {
     font-size: 15px;
+  }
+
+  .grid figure.image-effect figcaption .title {
+    width: 170px;
+  }
+
+  .grid figure.image-effect h2 {
+    font-size: 14px;
+  }
+
+  .grid figure.image-effect figcaption .title p.web_tech {
+    font-size: 9px;
+  }
+
+  .grid figure.image-effect p.description {
+    font-size: 43%;
+    bottom: 7em;
+  }
+
+  .grid figure.image-effect p.icon-links a.github {
+    background-size: 35px;
+    width: 35px;
+    height: 34px;
+  }
+
+  .grid figure.image-effect p.icon-links a.link {
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .grid figure.image-effect figcaption {
+    height: 2.75em;
   }
 
   section.portfolio div.grid figure {
