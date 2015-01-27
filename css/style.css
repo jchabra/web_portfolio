@@ -127,6 +127,9 @@
     color: #b66f6d;
     margin-bottom: 15px;
   }
+  section.about a:hover {
+    text-decoration: underline;
+  }
 
   section.contact {
     background-color: #4d5464;
@@ -138,19 +141,18 @@
   footer {
     background-color: #3a404c;
     color: white;
-    height: 65px;
+    height: 100%;
   }
   footer p.text {
-    float: right;
-    padding: 10px 20px;
+    text-align: right;
+    padding-top: 10px;
   }
   footer .footer_links {
     display: inline-block;
-    margin: 10px 20px;
+    margin-top: 12px;
   }
   footer .footer_links a {
     display: inline-block;
-    margin-right: 5px;
   }
   footer .footer_links a.linkedin {
     background: url("../images/linkedin_icon.png") no-repeat;
@@ -422,82 +424,44 @@
     color: #b66f6d;
   }
 
-  .zero {
-    margin: 0;
-    padding: 0;
-  }
-
-  .top {
-    margin-top: 0;
-  }
-
-  .top2 {
-    margin-top: 30px;
-  }
-
-  .underline a:hover {
-    text-decoration: underline;
-  }
-
   .text {
     font-size: 12px;
     line-height: 1.6;
     font-family: 'Raleway', serif;
   }
 
-  .about {
+  #about_bullet {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #about_bullet p {
     font-size: 14px;
     line-height: 1.6;
     font-family: 'Raleway', sans-serif;
   }
-  .about.bullet {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .about span {
+  #about_bullet span {
     font-size: 20px;
     color: #b66f6d;
     margin: 0 5px 0 0;
   }
 
-  .section {
-    margin-bottom: 200px;
-  }
-
   form {
-    width: 960px;
     margin: 0 auto;
+    padding: 10px 0 0 0 !important;
   }
-  form .form_fields {
-    display: inline-block;
-    width: 460px;
-    margin-right: 15px;
-  }
-  form .form_fields.antispam {
-    width: 310px;
-  }
-  form .form_fields.antispam input {
-    width: 310px;
-  }
-  form .form_fields label {
+  form label {
     color: #88bfb6;
   }
-  form .form_textarea {
-    display: inline-block;
-    width: 940px;
-  }
-  form .form_textarea label {
-    color: #88bfb6;
+  form.contact_form div {
+    margin-bottom: 1%;
   }
 
   label {
     display: block;
-    margin-top: 20px;
     letter-spacing: 2px;
   }
 
   input, textarea {
-    width: 460px;
     height: 33px;
     background: #f6f6f6;
     border-radius: 3px;
@@ -515,7 +479,6 @@
   }
 
   textarea {
-    width: 940px;
     height: 100px;
     font-family: Arial, Helvetica, sans-serif;
     background: #efefef;
@@ -542,6 +505,7 @@
 @media screen and (min-width: 768px) {
   #header {
     background: url(../images/flower2.png) no-repeat;
+    background-color: #4d5464;
     background-size: 280px;
     background-position: 15% -45px;
     height: 190px;
@@ -564,6 +528,10 @@
   #header .container nav ul.nav_links li a:hover {
     color: #b66f6d;
   }
+
+  #contact section.contact form .submit_button {
+    margin-top: 22px;
+  }
 }
 @media screen and (max-width: 767px) {
   nav h1 {
@@ -571,6 +539,17 @@
   }
   nav ul li {
     font-size: 200%;
+  }
+
+  #contact section.contact form .submit_button {
+    margin-top: 10px;
+  }
+
+  footer .footer_links, footer p.text {
+    text-align: center;
+  }
+  footer p.text {
+    padding-top: 0px;
   }
 }
 @media screen and (max-width: 550px) {

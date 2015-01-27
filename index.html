@@ -25,58 +25,6 @@
 </head>
 
 <body>
-<div class="grid-container" style="background: green;">
-  <div class="grid-50 mobile-grid-100" style="background: red;">
-    I am 50% wide on desktop.
-    I am 100% wide on mobile.
-  </div>
-  <div class="grid-25 mobile-grid-50" style="background: blue;">
-    I am 25% wide on desktop.
-    I am 50% wide on mobile.
-  </div>
-  <div class="grid-25 mobile-grid-50" style="background: yellow;">
-    <span class="hide-on-desktop" style="background: purple;">
-      I am hidden on desktop.
-    </span>
-    <span class="hide-on-mobile" style="background: orange;">
-      I am hidden on mobile.
-    </span>
-  </div>
-</div><!-- test example -->
-
-Test 2
-<div class="grid-container" style="border: 1px solid red;">
-  <div class="grid-50" style="border: 1px solid green;">
-    Tall content here that
-    would be alongside the
-    50%, 25|25 25|25 rows.
-  </div>
-
-  <!--
-    Nested grid units...
-  -->
-
-  <div class="grid-50 grid-parent" style="border: 1px solid blue;">
-    <div class="grid-50" style="border: 1px solid orange;">
-      Row 1:
-        I am 25% (50% of 50%)
-    </div>
-    <div class="grid-50" style="border: 1px solid yellow;">
-      Row 1:
-        I am 25% (50% of 50%)
-    </div>
-    <div class="grid-50" style="border: 1px solid pink;">
-      Row 2:
-        I am 25% (50% of 50%)
-    </div>
-    <div class="grid-50" style="border: 1px solid purple;">
-      Row 2:
-        I am 25% (50% of 50%)
-    </div>
-  </div>
-</div><!-- test 2 -->
-
-
   <div id="wrapper">
   <!-- ******** Header and Nav ******** -->
   <div id="header">
@@ -205,20 +153,22 @@ Test 2
   <div id="about">
     <section class="about">
       <div class="container grid-container">
-        <h2>{about me}</h2>
-        <h4 class="top">EDUCATION &amp; EXPERIENCE:</h4>
-        <p class="about">I have a BA in Economics from NYU (2007).</p>
-        <p class="about">I am a web developer, with a focus on front-end and user interface design. I recently worked as a front-end developer at Sailthru, a big data/email service provider start-up based in New York.</p>
-        <p class="underline about">I graduated from General Assembly's <a href="http://wdi2.github.io/students/" target="_blank"><b>Web Development Immersive (WDI)</b></a> Program, which is a full-stack intensive course on HTML/CSS, Javascript, AJAX, jQuery, Ruby, Ruby on Rails. Prior to WDI, I worked in marketing in the tech world. I have 5+ years of experience in digital, design, event, and social media marketing.</p>
-        <h4 class="top2">TECHNICAL SKILLS:</h4>
-        <p class="about bullet"><span>&bull;</span><strong>Web Dev:</strong> HTML5, CSS3, HAML, SASS, JavaScript, AJAX, Jquery, JSON, Ruby on Rails</p>
-        <p class="about bullet"><span>&bull;</span><strong>Design:</strong> Adobe Photoshop, Illustrator, InDesign, Dreamweaver (MAC/PC)</p>
-        <p class="about bullet"><span>&bull;</span><strong>Database:</strong> PostgreSQL, Oracle SQL</p>
-        <p class="about bullet"><span>&bull;</span><strong>Management:</strong> FogBugz, Trello, Pivotal Tracker, Github, Cyberduck, MS Office </p>
-        <p class="about bullet"><span>&bull;</span><strong>Cloud Application Program:</strong> Heroku, Amazon S3</p>
-        <p class="about bullet"><span>&bull;</span><strong>Customer Relationship Management (Sales):</strong> Microsoft Dynamics CRM, Salesforce</p>
-        <p class="about bullet"><span>&bull;</span>Experienced in Agile methodology</p>
-        <p class="about bullet"><span>&bull;</span>In-depth understanding of Web marketing, Web 2.0, &amp; search engine optimization</p>
+        <h2 class="grid-100 mobile-grid-100">{about me}</h2>
+        <h4 class="top grid-100 mobile-grid-100">EDUCATION &amp; EXPERIENCE:</h4>
+        <p class="grid-100 mobile-grid-100">I have a BA in Economics from NYU (2007).</p>
+        <p class="grid-100 mobile-grid-100">I am a web developer, with a focus on front-end and user interface design. I recently worked as a front-end developer at Sailthru, a big data/email service provider start-up based in New York.</p>
+        <p class="grid-100 mobile-grid-100">I graduated from General Assembly's <a href="http://wdi2.github.io/students/" target="_blank"><b>Web Development Immersive (WDI)</b></a> Program, which is a full-stack intensive course on HTML/CSS, Javascript, AJAX, jQuery, Ruby, Ruby on Rails. Prior to WDI, I worked in marketing in the tech world. I have 5+ years of experience in digital, design, event, and social media marketing.</p>
+        <h4 class="top2 grid-100 mobile-grid-100">TECHNICAL SKILLS:</h4>
+        <div id="about_bullet">
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span><strong>Web Dev:</strong> HTML5, CSS3, HAML, SASS, JavaScript, AJAX, Jquery, JSON, Ruby on Rails</p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span><strong>Design:</strong> Adobe Photoshop, Illustrator, InDesign, Dreamweaver (MAC/PC)</p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span><strong>Database:</strong> PostgreSQL, Oracle SQL</p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span><strong>Management:</strong> FogBugz, Trello, Pivotal Tracker, Github, Cyberduck, MS Office </p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span><strong>Cloud Application Program:</strong> Heroku, Amazon S3</p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span><strong>Customer Relationship Management (Sales):</strong> Microsoft Dynamics CRM, Salesforce</p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span>Experienced in Agile methodology</p>
+          <p class="grid-100 mobile-grid-100"><span>&bull;</span>In-depth understanding of Web marketing, Web 2.0, &amp; search engine optimization</p>
+        </div>
       </div><!--//.container .grid-container-->
     </section> <!-- //.about -->
   </div><!-- //#about -->
@@ -227,26 +177,28 @@ Test 2
   <!-- ******** CONTACT ******** -->
   <div id="contact">
     <section class="contact">
-      <div class="container">
-        <h2>{contact me}</h2>
-        <form method="post" action="index.php">
-          <div class="form_fields">
+      <div class="container grid-container">
+        <h2 class="grid-100 mobile-grid-100">{contact me}</h2>
+        <form method="post" action="index.php" class="contact_form grid-100 mobile-grid-100">
+          <div class="grid-50 mobile-grid-100">
             <label>Name</label>
-            <input name="name" placeholder="Type Here">
+            <input name="name" placeholder="Name" class="grid-100 mobile-grid-100">
           </div>
-          <div class="form_fields">
+          <div class="grid-50 mobile-grid-100">
             <label>Email</label>
-            <input name="email" type="email" placeholder="Type Here">
+            <input name="email" type="email" placeholder="Type Here" class="grid-100 mobile-grid-100">
           </div>
-          <div class="form_textarea">
+          <div class="grid-100 mobile-grid-100">
             <label>Message</label>
-            <textarea name="message" placeholder="Type Here"></textarea>
+            <textarea name="message" placeholder="Type Here" class="grid-100 mobile-grid-100"></textarea>
           </div>
-          <div class="form_fields antispam">
+          <div class="antispam grid-50 mobile-grid-100">
             <label>*What is 2x3? (Anti-spam)</label>
-            <input name="human" placeholder="Type Here">
+            <input name="human" placeholder="Type Here" class="grid-100 mobile-grid-100">
           </div>
-          <input id="submit" name="submit" type="submit" value="Submit">
+          <div class="submit_button grid-50 mobile-grid-100">
+            <input id="submit" name="submit" type="submit" value="Submit" class="grid-100 mobile-grid-100">
+          </div>
         </form>
       </div>
     </section>
@@ -259,12 +211,12 @@ Test 2
   </div><!-- end of #returntotop and .homebutton -->
 
   <!-- Footer -->
-  <footer>
-    <div class="footer_links">
+  <footer class="grid-100 mobile-grid-100">
+    <div class="footer_links grid-50 mobile-grid-100">
       <a href="http://www.linkedin.com/in/jchabra" target="_blank" class="linkedin">Linkedin</a>
       <a href="https://github.com/jchabra" target="_blank" class="github">Github</a>
     </div>
-    <p class="text">Hand coded and designed with <span class="pink">&hearts;</span> by Jasmine.</p>
+    <p class="text grid-50 mobile-grid-100">Hand coded and designed with <span class="pink">&hearts;</span> by Jasmine.</p>
   </footer>
 </div><!-- //#wrapper -->
 </body>

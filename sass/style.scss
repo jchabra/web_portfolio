@@ -8,7 +8,7 @@
 //    c) Navigation
 //    d) Footer
 //    e) Portfoliio Affects
-//    f)  Other Layout Styles
+//     f) Other Layout Styles
 //    g) Contact Form
 // 5) Large Device Media Queries
 // 6) Small Device Media Queries
@@ -165,6 +165,9 @@ section.about {
     color: $pink;
     margin-bottom: 15px;
   }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 section.contact {
@@ -178,17 +181,16 @@ section.contact {
 footer {
   background-color: $darkblue;
   color: $white;
-  height: 65px;
+  height: 100%;
   p.text {
-    float: right;
-    padding: 10px 20px;
+    text-align: right;
+    padding-top: 10px;
   }
   .footer_links {
     display: inline-block;
-    margin: 10px 20px;
+    margin-top: 12px;
     a {
       display: inline-block;
-      margin-right: 5px;
       &.linkedin {
         background: url('../images/linkedin_icon.png') no-repeat;
         background-position: 0px 0px;
@@ -466,22 +468,22 @@ figure.image-effect:hover p.icon-links a:first-child {
   color: $pink;
 }
 
-.zero {
-  margin: 0;
-  padding: 0;
-}
+// .zero {
+//   margin: 0;
+//   padding: 0;
+// }
 
-.top {
-  margin-top: 0;
-}
+// .top {
+//   margin-top: 0;
+// }
 
-.top2 {
-  margin-top: 30px;
-}
+// .top2 {
+//   margin-top: 30px;
+// }
 
-.underline a:hover {
-  text-decoration: underline;
-}
+// .section {
+//   margin-bottom: 200px;
+// }
 
 .text {
   font-size: 12px;
@@ -489,13 +491,14 @@ figure.image-effect:hover p.icon-links a:first-child {
   font-family: 'Raleway', serif;
 }
 
-.about {
-  font-size: 14px;
-  line-height: 1.6;
-  font-family: 'Raleway', sans-serif;
-  &.bullet {
-    margin-top: 0;
-    margin-bottom: 0;
+#about_bullet {
+  margin-top: 0;
+  margin-bottom: 0;
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+
   }
   span {
     font-size: 20px;
@@ -504,46 +507,28 @@ figure.image-effect:hover p.icon-links a:first-child {
   }
 }
 
-.section {
-  margin-bottom: 200px;
-}
-
-
 // **** CONTACT FORM *** //
 form {
-  width:960px;
   margin:0 auto;
-  .form_fields {
-    display: inline-block;
-    width: 460px;
-    margin-right: 15px;
-    &.antispam {
-      width: 310px;
-      input {
-        width: 310px;
-      }
-    }
-    label {
-      color: $green;
+  padding: 10px 0 0 0 !important;
+  label {
+    color: $green;
+  }
+  &.contact_form {
+    div {
+      margin-bottom: 1%;
     }
   }
-  .form_textarea {
-    display: inline-block;
-    width: 940px;
-    label {
-      color: $green;
-    }
-  }
-}
+}//end of form
 
 label {
   display:block;
-  margin-top:20px;
+  // margin-top:20px;
   letter-spacing:2px;
 }
 
 input, textarea {
-  width:460px;
+  // width:460px;
   height:33px;
   background:$beige;
   border-radius:3px;
@@ -561,7 +546,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
-  width: 940px;
+  // width: 940px;
   height:100px;
   font-family:Arial, Helvetica, sans-serif;
   background: #efefef;
@@ -593,6 +578,7 @@ textarea {
 // ****  NAVIGATION  *****//
 #header {
   background:url(../images/flower2.png) no-repeat;
+  background-color: $blue;
   background-size: 280px;
   background-position: 15% -45px;
   height: 190px;
@@ -622,6 +608,16 @@ textarea {
   }
 } //#header
 
+#contact {
+  section.contact {
+    form {
+      .submit_button {
+        margin-top: 22px; 
+      }
+    }
+  }
+}
+
 } // media query min-width 768px
 
 // **** --------------- SMALL DEVICE MEDIA QUERIES ----------------- *****//
@@ -637,7 +633,24 @@ textarea {
       }
     }
   }
-}
+  #contact {
+    section.contact {
+      form {
+        .submit_button {
+          margin-top: 10px; 
+        }
+      }
+    }
+  }
+  footer {
+    .footer_links, p.text {
+      text-align: center;
+    }
+    p.text {
+      padding-top: 0px;
+    }
+  }
+} // media query max-width 767px
 
 @media screen and (max-width: 550px) {
   nav {
@@ -650,5 +663,5 @@ textarea {
       }
     }
   }
-}
+} // media query max-width 550px
 
