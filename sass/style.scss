@@ -103,15 +103,9 @@ section {
     nav {
       margin: 0 auto;
       text-align: center;
-      h1 {
-        font-size: 140px;
-        line-height: 1em;
-        margin: 0;
-        color: $green;
-        a {
-          text-decoration: none;
-          color: $green;
-          font-weight: 100;
+      div.logo {
+        img {
+          margin-top: 10px;
         }
       }
       ul.nav_links {
@@ -119,10 +113,11 @@ section {
         margin: 0px;
         li {
           float: left;
-          font-size: 28px;
-          font-weight: 100;
+          &.first {
+            text-align: right;
+          }
           &.last {
-            margin-right: 0px;
+            text-align: left;;
           }
           a {
             color: $green;
@@ -131,7 +126,7 @@ section {
             }
           }
         }
-      }
+      } //ul.navlinks
     }  
   }
 } //#header
@@ -571,6 +566,16 @@ textarea {
 
 // **** --------------- LARGE DEVICE MEDIA QUERIES ----------------- *****//
 
+@media screen and (max-width: 1199px) {
+  #header {
+    .container {
+      nav {
+        background-position: 5% -45px;  
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1000px) {
   section.portfolio {
     min-height: 685px;
@@ -608,6 +613,12 @@ textarea {
 }
 
 @media screen and (max-width: 666px) {
+  ul.nav_links {
+    li {
+      font-size: 22px;
+      font-weight: 100;
+    }
+  } //ul.navlinks
   section.portfolio {
     min-height: 920px;
     div.grid {
@@ -619,6 +630,17 @@ textarea {
 }
 
 @media screen and (max-width: 460px) {
+  #header {
+    .container {
+      nav {
+        ul.nav_links {
+          li {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
   section.portfolio {
     div.grid {
       figure {
@@ -628,17 +650,18 @@ textarea {
   }
 }
 
-@media screen and (max-width: 460px) {
-  section.portfolio {
-    div.grid {
-      figure {
-        margin: 10px 10%;
+@media screen and (max-width: 390px) {
+  #header {
+    .container {
+      nav {
+        ul.nav_links {
+          li {
+            font-size: 15px;
+          }
+        }
       }
     }
   }
-}
-
-@media screen and (max-width: 390px) {
   section.portfolio {
     div.grid {
       figure {
@@ -651,19 +674,15 @@ textarea {
 @media screen and (min-width: 768px) {
 // ****  NAVIGATION  *****//
 #header {
-  background:url(../images/flower2.png) no-repeat;
   background-color: $blue;
-  background-size: 280px;
-  background-position: 15% -45px;
-  height: 190px;
   .container {
     nav {
-      h1 {
-        font-size: 140px;
-        a {
-          text-decoration: none;
-          color: $green;
-          font-weight: 100;
+      height: 190px;
+      div.logo {
+        img {
+          margin-top: 10px;
+          width: 780px;
+          height: auto;
         }
       }
       ul.nav_links {
@@ -697,16 +716,6 @@ textarea {
 // **** --------------- SMALL DEVICE MEDIA QUERIES ----------------- *****//
 
 @media screen and (max-width: 767px) {
-  nav {
-    h1 {
-      font-size: 865%;
-    }
-    ul {
-      li {
-        font-size: 200%;
-      }
-    }
-  }
   #contact {
     section.contact {
       form {
@@ -728,12 +737,9 @@ textarea {
 
 @media screen and (max-width: 550px) {
   nav {
-    h1 {
-      font-size: 565%;
-    }
-    ul {
+    ul.nav_links {
       li {
-        font-size: 150%;
+        font-size: 22px;
       }
     }
   }
