@@ -643,8 +643,21 @@ textarea {
   }
 }
 
-@media screen and (max-width: 720px) {
-
+@media screen and (max-width: 733px) {
+  ul.nav_links {
+    li {
+      font-size: 22px;
+      font-weight: 100;
+    }
+  } //ul.navlinks
+  section.portfolio {
+    div.grid {
+      figure {
+        width: 75%;
+        margin: 10px 12% !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -693,6 +706,16 @@ textarea {
     div.grid {
       figure {
         margin: 10px 15%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section.portfolio {
+    div.grid {
+      figure {
+        margin: 10px 10%;
       }
     }
   }
