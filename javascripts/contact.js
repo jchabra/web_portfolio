@@ -25,7 +25,7 @@ $('#contact_form').validate({
     $(form).ajaxSubmit({
       type:"POST",
       data: $(form).serialize(),
-      url:"process.php",
+      url:"index.php",
       success: function() {
         $('#contact_form :input').attr('disabled', 'disabled');
         $('#contact_form').fadeTo( "slow", 0.15, function() {
