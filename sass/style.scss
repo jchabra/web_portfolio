@@ -237,7 +237,7 @@ footer {
     img {
       position: relative;
       display: block;
-      min-height: 100%;
+      // min-height: 100%;
       max-width: 100%;
     }
     figcaption {
@@ -466,23 +466,6 @@ figure.image-effect:hover p.icon-links a:first-child {
   color: $pink;
 }
 
-// .zero {
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .top {
-//   margin-top: 0;
-// }
-
-// .top2 {
-//   margin-top: 30px;
-// }
-
-// .section {
-//   margin-bottom: 200px;
-// }
-
 .text {
   font-size: 12px;
   line-height: 1.6;
@@ -687,14 +670,6 @@ textarea {
       font-weight: 100;
     }
   } //ul.navlinks
-  section.portfolio {
-    div.grid {
-      figure {
-        width: 75%;
-        margin: 10px 12% !important;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -713,14 +688,6 @@ textarea {
   .grid figure.image-effect p.description {
     font-size: 70%;
     bottom: 7.5em;
-  }
-  section.portfolio {
-    min-height: 920px;
-    div.grid {
-      figure {
-        margin: 10px 18%;
-      }
-    }
   }
 }
 
@@ -753,23 +720,6 @@ textarea {
   .grid figure.image-effect p.description {
     font-size: 50%;
     bottom: 7em;
-  }
-  section.portfolio {
-    div.grid {
-      figure {
-        margin: 10px 15%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  section.portfolio {
-    div.grid {
-      figure {
-        margin: 10px 10%;
-      }
-    }
   }
 }
 
@@ -810,13 +760,6 @@ textarea {
   }
   .grid figure.image-effect figcaption {
     height: 2.75em;
-  }
-  section.portfolio {
-    div.grid {
-      figure {
-        margin: 10px 8%;
-      }
-    }
   }
 }
 
