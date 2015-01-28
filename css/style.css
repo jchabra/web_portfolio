@@ -449,8 +449,12 @@
   }
 
   label {
-    display: block;
+    display: inline-block;
     letter-spacing: 2px;
+  }
+  label.error {
+    color: #b66f6d;
+    font-size: 11px;
   }
 
   input, textarea {
@@ -468,6 +472,10 @@
 
   input:focus, textarea:focus {
     border: 1px solid #97d6eb;
+  }
+
+  input.error, textarea.error {
+    background-color: #e2ddc2;
   }
 
   textarea {

@@ -31,6 +31,7 @@ $blue: #4d5464;
 $pink: #b66f6d;
 $beige: #f6f6f6;
 $darkblue: #3a404c;
+$yellow: #e2ddc2;
 
 // **** --------------- MEDIA "ALL" QUERIES ----------------- *****//
 
@@ -519,8 +520,12 @@ form {
 }//end of form
 
 label {
-  display:block;
+  display:inline-block;
   letter-spacing:2px;
+  &.error {
+    color: $pink;
+    font-size: 11px;
+  }
 }
 
 input, textarea {
@@ -538,6 +543,10 @@ input, textarea {
 
 input:focus, textarea:focus {
   border:1px solid #97d6eb;
+}
+
+input.error, textarea.error {
+  background-color: $yellow;
 }
 
 textarea {

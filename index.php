@@ -8,5 +8,11 @@
   $subject = "Contact Form";
   $mailheader = "From: $email \r\n";
   mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-  echo "Thank You!" . " -" . "<a href='form.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";
+  if ($_POST['submit']) {
+    if (successful) {
+      print "<p>Your email has been sent; Thank you.</p>";
+    } else {
+      print "<p>Sorry, there was a problem sending the email.</p>";
+    }
+  }
 ?>
