@@ -573,6 +573,24 @@ textarea {
   }
 }
 
+#success, #error {
+  display: none;
+  font-size: 18px;
+  span {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}
+
+#success {
+  color: $green;
+}
+
+#error {
+  color: $pink;
+}
+
 } // media "all" queries
 
 // **** --------------- LARGE DEVICE MEDIA QUERIES ----------------- *****//

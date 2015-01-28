@@ -501,6 +501,24 @@
     border: 2px solid #b66f6d;
     color: white;
   }
+
+  #success, #error {
+    display: none;
+    font-size: 18px;
+  }
+  #success span, #error span {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  #success {
+    color: #88bfb6;
+  }
+
+  #error {
+    color: #b66f6d;
+  }
 }
 @media screen and (max-width: 1199px) {
   #header .container nav {
