@@ -1,11 +1,18 @@
 <?php
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
-  $human = $_POST['human'];
-  $formcontent=" From: $name \n Email: $email  \n Message: $message";
-  $recipient = "jchabra@gmail.com";
-  $subject = "Somebody contacted you from your website!";
-  $mailheader = "From: $email \r\n";
-  mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+
+    $to = "jchabra@gmail.com";
+    $name = $_REQUEST['name'];
+    $from = $_REQUEST['email'];
+    $headers = "From: $from";
+    $subject = "Somebody contacted you from your website!";
+
+    $fields = array();
+    $fields{"name"} = "name";
+    $fields{"email"} = "email";
+    $fields{"message"} = "message";
+
+    $body = "Here is what was sent:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
+
+    $send = mail($to, $subject, $body, $headers);
+
 ?>
