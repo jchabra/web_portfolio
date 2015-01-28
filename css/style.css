@@ -62,7 +62,7 @@
     background-color: #4d5464;
   }
   #header .container {
-    margin: auto;
+    margin: 0 auto 5px auto;
   }
   #header .container nav {
     margin: 0 auto;
@@ -562,13 +562,13 @@
 @media screen and (max-width: 806px) {
   .grid figure.image-effect p.description {
     font-size: 85%;
-    bottom: 8em;
+    bottom: 9em;
   }
 }
 @media screen and (max-width: 769px) {
   .grid figure.image-effect p.description {
     font-size: 75%;
-    bottom: 7em;
+    bottom: 8em;
   }
 }
 @media screen and (max-width: 758px) {
@@ -611,19 +611,19 @@
   }
 
   .grid figure.image-effect p.description {
-    font-size: 70%;
+    font-size: 75%;
     bottom: 7.5em;
   }
 }
 @media screen and (max-width: 599px) {
   .grid figure.image-effect p.description {
-    font-size: 60%;
+    font-size: 67%;
     bottom: 7.5em;
   }
 }
 @media screen and (max-width: 530px) {
   .grid figure.image-effect p.description {
-    font-size: 55%;
+    font-size: 60%;
     bottom: 7.5em;
   }
 }
